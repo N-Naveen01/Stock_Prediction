@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+</head>
+<body>
+    <h1>Stock Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="open">Open Price:</label><br>
+        <input type="text" id="open" name="open"><br>
+        <label for="high">High Price:</label><br>
+        <input type="text" id="high" name="high"><br>
+        <label for="low">Low Price:</label><br>
+        <input type="text" id="low" name="low"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if predicted_close_price %}
+    <h2>Predicted Close Price: {{ predicted_close_price }}</h2>
+    {% endif %}
+</body>
+</html>
